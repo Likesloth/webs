@@ -1,0 +1,62 @@
+import React, { useState } from 'react';
+export default function Yzustand() {
+    const [num,  setnum ] = useState()
+    const [numB, setnumb] = useState()
+    const [numC, setnumC] = useState()
+
+    return (
+        <div>
+
+            <A inA={num} />
+            <input onChange={(e) => {
+                // console.log(e.target.value)
+                setnum((e.target.value))
+            }} />
+
+            <B inB={numB} />
+            <input onChange={(x) => {
+                setnumb((x.target.value))
+            }} />
+            
+        
+            
+
+        </div>
+
+    )
+
+}
+function A(props_A) {
+    return (
+        <div>
+            this is component A: 
+            {props_A.inA}
+        </div>
+
+    )
+
+}
+
+function B(props_B) {
+    return (
+        <div>
+            this is component B: 
+            {props_B.inB}
+
+        </div>
+
+    )
+
+}
+
+function C(props_C) {
+    return (
+        <div>
+            this is component C:
+            {/* {props_C.inC} */}
+
+        </div>
+
+    )
+
+}
